@@ -25,7 +25,7 @@ public class HttpClientUtil {
             httpClient = new SSLClient();
             httpPost = new HttpPost(url);
             httpPost.addHeader("Content-Type", "application/json");
-            StringEntity se = new StringEntity(jsonstr);
+            StringEntity se = new StringEntity(jsonstr,charset);
             se.setContentType("text/json");
             se.setContentEncoding(new BasicHeader("Content-Type", "application/json"));
             httpPost.setEntity(se);
